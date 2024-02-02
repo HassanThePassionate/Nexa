@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  font-size: 62.5%;
+}
+:root {
+  --primary-color: rgb(76, 175, 79);
+  --dark-color: #4d4d4d;
+  --light-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 1480px;
+  margin: auto;
+  padding: 0 3rem;
+  overflow: hidden;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+.btn {
+  padding: 1.6rem 4rem;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  font-weight: 500;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+header {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem;
+}
+
+.navbar .list {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.navbar .list li a {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.navbar .logo img {
+  width: 125px;
+}
+.hero {
+  background-color: #f5f7fa;
+}
+.home-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  gap: 18rem;
+}
+.home-info .text-info h1 {
+  font-size: 5rem;
+  line-height: 1.25;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+.home-info .text-info p {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+.home-info .text-info .btn {
+  margin-top: 2rem;
+}
+.home-info .home-img img {
+  width: 40rem;
+}
+
+.client-info {
+  text-align: center;
+}
+.client-info h2 {
+  font-size: 3rem;
+  margin: 1rem;
+  color: var(--dark-color);
+}
+
+.client-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+.client-img img {
+  width: 40px;
+}
+
+.community-text {
+  text-align: center;
+}
+.community-text h3 {
+  font-size: 3.5rem;
+  margin-top: 6rem;
+  color: var(--dark-color);
+}
+
+.community-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 4rem;
+  gap: 3rem;
+  padding: 3rem;
+}
+
+.community-grid h4 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.community-grid p {
+  color: var(--dark-color);
+}
+.community-grid img {
+  width: 5rem;
+}
+
+.unlock-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13rem;
+}
+.unlock-info .unlock-text h3 {
+  font-size: 3.5rem;
+  margin: 1rem 0;
+}
+.unlock-info .unlock-text p {
+  width: 30vw;
+  margin: 1.8rem 0;
+}
+.unlock-info .unlock-img img {
+  width: 40rem;
+}
+.unlock-info .btn {
+  margin: 2rem 0;
+}
+.main-footer {
+  text-align: center;
+
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 2rem;
+}
+.main-footer p {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .home-info .text-info h1 {
+    font-size: 4rem;
+  }
+  .home-info {
+    gap: 10rem;
+  }
+  .unlock-info {
+    gap: 8rem;
+  }
+  .client-img > *:last-child {
+    display: none;
+  }
+  .grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .grid img {
+    width: 8rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navbar .list .btn {
+    display: none;
+  }
+  .navbar {
+    padding: 2rem;
+  }
+  .home-info .home-img img {
+    width: 30rem;
+  }
+  .home-info .text-info h1 {
+    font-size: 3rem;
+  }
+  .unlock-info .unlock-text h3 {
+    font-size: 2.5rem;
+  }
+  .community-text h3 {
+    font-size: 2.5rem;
+  }
+  .client-info h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .unlock-info {
+    flex-direction: column;
+  }
+  .unlock-info .unlock-text p {
+    width: 80vw;
+  }
+  .grid img {
+    display: none;
+  }
+  .home-info .home-img img {
+    display: none;
+  }
+  .home-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+  }
+  .client-img > *:first-child {
+    display: none;
+  }
+  .community-grid {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .client-img {
+    gap: 5rem;
+  }
+  .navbar .list li a {
+    display: none;
+  }
+}
